@@ -1,0 +1,21 @@
+
+.pozadina
+{
+    background-color: cadetblue;
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ja_sam_selektovan
+{
+    background-color: green;
+}

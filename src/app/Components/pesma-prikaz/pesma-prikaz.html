@@ -1,0 +1,9 @@
+
+@if (pesma) 
+{
+    <div class="pozadina" (click) = "kliknutoJe()" [class.ja_sam_selektovan]="(selektovana_pesma2$ | async)?.id_poslat == pesma.id">
+        <h2>{{pesma.naziv}}</h2>
+        <h4>{{pesma.godina}}</h4>
+     </div>
+
+}

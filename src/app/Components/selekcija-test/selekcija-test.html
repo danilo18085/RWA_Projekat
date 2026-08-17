@@ -1,0 +1,8 @@
+
+<div>
+    @if (selektovana_pesma$ | async)
+    {
+        <h2>Pesma je: {{(selektovana_pesma$ | async)?.naziv_poslat}}</h2>
+        <h4>Godina je: {{(selektovana_pesma$ | async)?.godina_poslata}}</h4>
+    }
+</div>

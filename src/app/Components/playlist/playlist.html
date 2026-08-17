@@ -1,0 +1,9 @@
+
+<hr>
+  @for(pesma of vratiPesme(); track pesma.id) 
+  {
+    <app-pesma-prikaz [pesma] = "pesma" 
+                      (klik_emiter)="reagujNaKlik($event)">
+    </app-pesma-prikaz>
+  }
+<hr>
