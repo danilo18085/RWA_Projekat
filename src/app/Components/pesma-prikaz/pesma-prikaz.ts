@@ -14,7 +14,6 @@ import { AsyncPipe } from '@angular/common';
 export class PesmaPrikaz {
 
   
-  
   @Input() pesma : Pesma | null = null
   @Output() klik_emiter : EventEmitter<Pesma> = new EventEmitter<Pesma>();
 

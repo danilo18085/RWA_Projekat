@@ -8,6 +8,7 @@ export interface PesmaPoruka {
 }
 
 export const pesma_feature = createFeatureSelector<Pesma>("pesma_red")
+export const vracene_pesme_feature = createFeatureSelector<Pesma[]>("vracene_pesme")
 
 export const pesma_selector = createSelector(
     pesma_feature,
@@ -16,4 +17,12 @@ export const pesma_selector = createSelector(
         naziv_poslat: state.naziv,
         godina_poslata: state.godina
     }}
+)
+
+
+export const vracene_pesme_selector = createSelector(
+    vracene_pesme_feature,
+    (state : Pesma[]) : Pesma[] => {
+        return state
+    }
 )

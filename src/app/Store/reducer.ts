@@ -1,17 +1,19 @@
 import { createReducer, on } from "@ngrx/store";
 import { Pesma } from "../Interfaces/Pesma";
-import { pesma_je_kliknuta_akcija } from "./actions";
+import { pesma_je_kliknuta_akcija, ucitaj_sve_pesme_succsess } from "./actions";
 
 
-export const inicijalno_stanje : Pesma = 
+export const selekcija_stanje : Pesma = 
 {
     id: null,
     naziv: null,
     godina: null
 }
 
+export const niz_pesama_stanje : Pesma[] = []
+
 export const pesma_reducer_funkcija = createReducer(
-    inicijalno_stanje,
+    selekcija_stanje,
     on(pesma_je_kliknuta_akcija, (state, {jedna_pesma}) => (
         {
             ...state,
@@ -20,4 +22,9 @@ export const pesma_reducer_funkcija = createReducer(
             godina: jedna_pesma.godina
         }
     ))
+)
+
+export const niz_pesama_za_prikaz = createReducer(
+    niz_pesama_stanje,
+    on(ucitaj_sve_pesme_succsess, (state, {vracene_pesme}) => vracene_pesme)
 )
