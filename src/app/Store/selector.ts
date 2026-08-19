@@ -1,5 +1,6 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { Pesma } from "../Interfaces/Pesma";
+import { EntityState } from "@ngrx/entity";
 
 export interface PesmaPoruka {
     id_poslat: number | null,
@@ -8,7 +9,7 @@ export interface PesmaPoruka {
 }
 
 export const pesma_feature = createFeatureSelector<Pesma>("pesma_red")
-export const vracene_pesme_feature = createFeatureSelector<Pesma[]>("vracene_pesme")
+
 
 export const pesma_selector = createSelector(
     pesma_feature,
@@ -19,10 +20,13 @@ export const pesma_selector = createSelector(
     }}
 )
 
+export const vracene_pesme_feature = createFeatureSelector<EntityState<Pesma>>("vracene_pesme")
 
 export const vracene_pesme_selector = createSelector(
     vracene_pesme_feature,
-    (state : Pesma[]) : Pesma[] => {
-        return state
+    state => {
+        return state.ids
+            .map(id => {return state.entities[id]})
+            .filter(pesma => pesma != null)
     }
 )

@@ -37,6 +37,3 @@ export class Playlist implements OnInit {
   }
 
 }
-
-//{id: 1, naziv: "Pustinja", godina: 1995}, {id: 2, naziv: "Pesma od bola", godina: 1996}, 
-                 // {id: 3, naziv:"Ista kao ja", godina: 2000}, {id: 4, naziv: "Civas", godina: 2001}
