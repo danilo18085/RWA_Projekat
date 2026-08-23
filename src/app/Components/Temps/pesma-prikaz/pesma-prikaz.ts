@@ -1,8 +1,8 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { Pesma } from '../../Interfaces/Pesma';
+import { Pesma } from '../../../Interfaces/Pesma';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { pesma_selector, PesmaPoruka } from '../../Store/selector';
+import { pesma_selector, PesmaPoruka } from '../../../Store/selector';
 import { AsyncPipe } from '@angular/common';
 
 @Component({

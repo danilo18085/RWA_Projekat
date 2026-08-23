@@ -1,0 +1,10 @@
+
+.div_donji_main
+{
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px;
+
+    /*background-color: green;*/
+}

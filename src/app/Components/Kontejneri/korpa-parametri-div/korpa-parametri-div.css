@@ -1,0 +1,9 @@
+.korpa_i_parametri_div
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 25%;
+    margin-left: 20px;
+}

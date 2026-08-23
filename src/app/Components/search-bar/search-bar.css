@@ -1,0 +1,9 @@
+.div_za_search
+{
+    display: flex;
+    flex-direction: row;
+    
+    gap: 15px;
+    justify-content: space-between;
+    margin-right: 20px;
+}

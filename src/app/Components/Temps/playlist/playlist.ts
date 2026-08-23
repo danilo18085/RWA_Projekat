@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Pesma } from '../../Interfaces/Pesma';
+import { Pesma } from '../../../Interfaces/Pesma';
 import { PesmaPrikaz } from '../pesma-prikaz/pesma-prikaz';
 import { Store } from '@ngrx/store';
-import { pesma_je_kliknuta_akcija, ucitaj_sve_pesme } from '../../Store/actions';
-import { vracene_pesme_selector } from '../../Store/selector';
+import { pesma_je_kliknuta_akcija, ucitaj_sve_pesme } from '../../../Store/actions';
+import { vracene_pesme_selector } from '../../../Store/selector';
 import { Observable, of } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 

@@ -1,0 +1,13 @@
+.div_gornji_main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 20px;
+    height: 100px;
+    border-bottom: 4px solid #10b981;
+
+    /*background-color: red;*/
+}

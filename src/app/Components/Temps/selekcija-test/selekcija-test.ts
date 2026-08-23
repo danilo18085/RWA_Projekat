@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { Pesma } from '../../Interfaces/Pesma';
+import { Pesma } from '../../../Interfaces/Pesma';
 import { Store } from '@ngrx/store';
-import { pesma_selector, PesmaPoruka } from '../../Store/selector';
+import { pesma_selector, PesmaPoruka } from '../../../Store/selector';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 
