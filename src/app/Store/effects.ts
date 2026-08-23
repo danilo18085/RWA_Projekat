@@ -2,7 +2,7 @@
 import { inject, Injectable } from '@angular/core';
 import * as PesmeActions from './actions'
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { Nekiservis } from '../services/nekiservis';
+import { Nekiservis } from '../Services/nekiservis';
 import { catchError, map, mergeMap, of } from 'rxjs';
 
 @Injectable()

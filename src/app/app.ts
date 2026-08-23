@@ -1,11 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Playlist } from './Components/playlist/playlist';
-import { SelekcijaTest } from './Components/selekcija-test/selekcija-test';
+import { Header } from './Components/header/header';
 
 
 @Component({
   selector: 'app-root',
-  imports: [Playlist, SelekcijaTest],
+  imports: [Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
