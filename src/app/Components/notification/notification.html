@@ -1,0 +1,8 @@
+<div class="notifikacije">
+    @for (notifikacija of (niz_notifikacija$ | async); track notifikacija.id )
+    {
+        <div class="toast show">
+            {{ notifikacija.poruka }}
+        </div>
+    }
+</div>

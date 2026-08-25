@@ -1,0 +1,27 @@
+.notifikacije 
+{
+  position: fixed;
+  bottom: 60px;
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.toast 
+{
+  background: rgb(199, 192, 192);
+  color: black;
+  padding: 10px 14px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.toast.show 
+{
+  opacity: 1;
+  transform: translateY(0);
+}

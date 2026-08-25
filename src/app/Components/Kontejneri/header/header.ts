@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Actions } from '@ngrx/effects';
+import { NotifikacijaActions } from '../../../Store/notifikacija.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +9,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {}
+export class Header {
+
+
+  constructor() {}
+
+
+
+}

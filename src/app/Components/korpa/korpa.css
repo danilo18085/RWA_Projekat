@@ -1,0 +1,57 @@
+.korpa
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.naziv_korpe
+{
+    background-color: #10b981;
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+}
+
+.visina 
+{
+    height: 20px;
+}
+
+.igrice_u_korpi
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.cena_kontejner
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 300px;
+    
+    justify-content: space-between;
+}
+
+.divider_linija
+{
+  height: 1px;
+  background-color: #10b981;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.max_velicina
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 300px;
+}

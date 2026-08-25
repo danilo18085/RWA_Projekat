@@ -1,0 +1,22 @@
+.slajder_kontejner
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 300px;
+
+    border-radius: 14px;
+    box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 10px 30px rgba(0, 0, 0, 0.8);
+    padding: 12px;
+}
+
+.labele_div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 4px;
+}
