@@ -1,3 +1,6 @@
 <div class="skup_igrica_kontejner">
-    
+    @for (jedna_igrica of (niz_igrica$ | async); track jedna_igrica.id)
+    {
+        <app-igrica [igrica]="jedna_igrica"></app-igrica>
+    }
 </div>

@@ -18,9 +18,5 @@ export class Notification {
   niz_notifikacija$ : Observable<Notifikacija[]> = this.store.select(notifikacija_selektor)
 
 
-  constructor() {
-    this.niz_notifikacija$.subscribe(
-      x => {console.log("Primio sam: " + x)}
-    )
-  }
+  constructor() {}
 }

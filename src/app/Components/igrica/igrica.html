@@ -1,0 +1,24 @@
+@if (igrica)
+{
+    <div class="kontejner_igrica">
+        @if (igrica.id > 32)
+        {
+            <img src="./Slike/default.png" class="image_wrapper">
+        }
+        @else
+        {
+            <img src="./Slike/{{igrica.id}}.jpg" class="image_wrapper">
+        }
+        <h3>{{igrica.ime}}</h3>
+        <p>Zanr: {{igrica.zanr}}</p>
+        <p>Godina: {{igrica.godina}}</p>
+        <p>Rating: {{igrica.rating.toFixed(1)}}</p>
+        <div class="divider_linija">
+        </div>
+        <div class="cena_kontejner">
+           <h3>{{izracunaj_cenu(igrica.osnovna_cena, igrica.popust)}}$</h3>
+           <h3>-{{igrica.popust}}%</h3>
+        </div>
+        <button>Dodaj u korpu</button>
+    </div>
+}

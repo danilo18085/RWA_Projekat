@@ -72,3 +72,19 @@ button:active
 {
   transform: scale(0.96); 
 }
+
+app-zanr-box,
+app-slajder,
+app-search-bar,
+app-notification,
+app-korpa,
+app-skup-igrice-kontejner,
+app-main-container,
+app-korpa-parametri-div,
+app-header,
+app-div-gornji-main,
+app-div-donji-main,
+app-igrica
+app-primer {
+  display: contents;
+}

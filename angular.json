@@ -22,7 +22,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/Slike"
             ],
             "styles": ["src/styles.css"]
           },

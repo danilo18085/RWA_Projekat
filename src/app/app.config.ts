@@ -9,6 +9,8 @@ import { provideEffects } from '@ngrx/effects';
 import { PesmeEffects } from './Store/effects';
 import { notifikacijaReducer } from './Store/notifikacija.reducer';
 import { NotifikacijaEffects } from './Store/notifikacija.effects';
+import { IgricaEffects } from './Store/igrica.effects';
+import { igricaReducer } from './Store/igrica.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,14 +19,15 @@ export const appConfig: ApplicationConfig = {
     provideStore({pesma_red: pesma_reducer_funkcija, 
                   vracene_pesme: niz_pesama_za_prikaz,
                   notifikacija_red: notifikacijaReducer,
+                  igrica_red: igricaReducer
                 }),
     provideHttpClient(),
-    provideEffects(PesmeEffects, NotifikacijaEffects),
+    provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects),
     provideStoreDevtools({
-      maxAge: 25,           // koliko akcija (istorije) da čuva u memoriji
-      logOnly: !isDevMode(), // automatski isključi u produkciji
-      autoPause: true,       // pauzira snimanje kad DevTools panel nije otvoren (bolje performanse)
-      trace: false,          // true = beleži stack trace za svaku akciju (korisno za debug, ali sporije)
+      maxAge: 25,
+      logOnly: !isDevMode(),
+      autoPause: true,       
+      trace: false,          
       traceLimit: 75
     })
   ]
