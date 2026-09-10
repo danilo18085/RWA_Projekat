@@ -1,8 +1,8 @@
 <div class="slajder_kontejner">
-    <input type="range" min="5" max="80" step="5" value="80">
+    <input type="range" min="5" max="80" step="5" value="80" (input)="promena_akcija($event)">
     <div class="labele_div">
         <label>1$</label>
-        <label>80$</label>
+        <label #labela_za_menjanje>80$</label>
         <label>80$</label>
     </div>
 </div>

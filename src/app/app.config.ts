@@ -11,6 +11,8 @@ import { notifikacijaReducer } from './Store/notifikacija.reducer';
 import { NotifikacijaEffects } from './Store/notifikacija.effects';
 import { IgricaEffects } from './Store/igrica.effects';
 import { igricaReducer } from './Store/igrica.reducer';
+import { FilteriEffects } from './Store/filteri.effects';
+import { filter_reducer_funkcija } from './Store/filteri.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,10 +21,11 @@ export const appConfig: ApplicationConfig = {
     provideStore({pesma_red: pesma_reducer_funkcija, 
                   vracene_pesme: niz_pesama_za_prikaz,
                   notifikacija_red: notifikacijaReducer,
-                  igrica_red: igricaReducer
+                  igrica_red: igricaReducer,
+                  filteri_red: filter_reducer_funkcija
                 }),
     provideHttpClient(),
-    provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects),
+    provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects, FilteriEffects),
     provideStoreDevtools({
       maxAge: 25,
       logOnly: !isDevMode(),
