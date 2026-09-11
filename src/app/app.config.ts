@@ -13,6 +13,7 @@ import { IgricaEffects } from './Store/igrica.effects';
 import { igricaReducer } from './Store/igrica.reducer';
 import { FilteriEffects } from './Store/filteri.effects';
 import { filter_reducer_funkcija } from './Store/filteri.reducer';
+import { korpa_reducer } from './Store/korpa.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,7 +23,8 @@ export const appConfig: ApplicationConfig = {
                   vracene_pesme: niz_pesama_za_prikaz,
                   notifikacija_red: notifikacijaReducer,
                   igrica_red: igricaReducer,
-                  filteri_red: filter_reducer_funkcija
+                  filteri_red: filter_reducer_funkcija,
+                  korpa_red: korpa_reducer
                 }),
     provideHttpClient(),
     provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects, FilteriEffects),

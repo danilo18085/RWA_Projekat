@@ -1,9 +1,14 @@
     <div class="korpa">
         <div class="naziv_korpe"></div>
-        <div class="igrice_u_korpi"></div>
+        <div class="igrice_u_korpi">
+            @for(jedan_element of (niz_elemenata$ | async); track jedan_element.id)
+            {
+                <app-element-u-korpi [element]="jedan_element"></app-element-u-korpi>
+            }
+        </div>
         <div class="cena_kontejner visina">
             <h3>Ukupno:</h3>
-            <h3>0.00$</h3>
+            <h3>{{ ukupna_cena$ | async | number: '1.2-2' }}$</h3>
         </div>
         <div class="divider_linija max_velicina"></div>
 

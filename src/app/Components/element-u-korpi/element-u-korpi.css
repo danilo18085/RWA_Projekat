@@ -1,0 +1,44 @@
+
+.element_div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+}
+
+.element_mali_div
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 6px;
+    align-items: center;
+}
+
+.element_x
+{
+    display: flex;
+    align-items: center;
+    color: red;
+    border-left: 3px solid red;
+    padding-left: 7px;
+    margin-left: 5px;
+
+}
+
+.mali_padding
+{
+    padding-left: 4px;
+}
+
+.no-select 
+{
+  user-select: none;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@ export const filter_stanje : Filter =
 {
     search: "",
     zanr: [],
-    max_cena: 0
+    max_cena: 100
 }
 
 export const filter_reducer_funkcija = createReducer(
