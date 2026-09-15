@@ -4,12 +4,16 @@ import { IgricaModel } from '../Interfaces/IgricaModel';
 import { Observable } from 'rxjs';
 import { Filter } from '../Interfaces/Filter';
 import { TiketModel } from '../Interfaces/TiketModel';
+import { IgricaModelDodavanje } from '../Interfaces/IgricaModelDodavanje';
+import { AdminService } from './admin/admin-service';
 
 @Service()
 export class IgricaService {
 
     private url : string = 'http://localhost:3000/igrica'
     private readonly http: HttpClient = inject(HttpClient)
+
+    private admin_service : AdminService = inject(AdminService)
 
     constructor() {}
 
@@ -26,6 +30,11 @@ export class IgricaService {
         .set("max_cena", param.max_cena.toString())
 
       return this.http.get<IgricaModel[]>(this.url + "/igrice_filter", { params })
+    }
+
+    dodaj_igricu(igra : IgricaModelDodavanje)
+    {
+      return this.http.post<IgricaModel>(this.url + "/dodaj_igricu/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token(), igra)
     }
 
 }

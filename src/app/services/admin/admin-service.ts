@@ -50,4 +50,14 @@ export class AdminService
         this._username.set(username_admina)
     }
 
+    vrati_token()
+    {
+        return this.cookies.get("token")
+    }
+
+    vrati_username()
+    {
+        return this.cookies.get("username")
+    }
+
 }

@@ -2,6 +2,7 @@
     @if(adminService.isAdmin())
     {
         <button class="logout" (click)="logout()">Logout</button>
+        <app-dodaj-button></app-dodaj-button>
     }
     @else 
     {
@@ -13,7 +14,7 @@
         <div class="modal">
             <form [formGroup]="forma" (ngSubmit)="sacuvaj()">
                 <input type="text" formControlName="username" placeholder="Username" />
-                <input type="text" formControlName="password" placeholder="Password" />
+                <input type="password" formControlName="password" placeholder="Password" />
                 <div class="dugmici">
                   <button type="button" (click)="zatvoriFormu()">Otkaži</button>
                   <button type="submit">Login</button>

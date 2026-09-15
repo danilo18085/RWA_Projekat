@@ -4,10 +4,11 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { AdminModel } from '../../../Interfaces/AdminModel';
 import { Store } from '@ngrx/store';
 import { NotifikacijaActions } from '../../../Store/notifikacija.actions';
+import { DodajButton } from '../../dodaj-button/dodaj-button';
 
 @Component({
   selector: 'app-header',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, DodajButton],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

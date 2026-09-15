@@ -1,0 +1,30 @@
+<button class="margin" (click)="otvoriFormu()">Dodaj igricu</button>
+@if (prikaziFormu()) 
+{
+<div class="overlay">
+<div class="modal">
+    <form [formGroup]="forma" (ngSubmit)="sacuvaj()">
+        <input type="text" formControlName="naziv" placeholder="Naziv" />
+        <select formControlName="zanr" class="selekt-element">
+            <option value="RPG">RPG</option>
+            <option value="ACTION">ACTION</option>
+            <option value="HORROR">HORROR</option>
+            <option value="ADVENTURE">ADVENTURE</option>
+            <option value="SANDBOX">SANDBOX</option>
+            <option value="DETECTIVE">DETECTIVE</option>
+            <option value="SHOOTER">SHOOTER</option>
+            <option value="SPORTS">SPORTS</option>
+        </select>
+        <input type="number" formControlName="godina" placeholder="Godina" />
+        <input type="number" formControlName="rejting" placeholder="Rejting" />
+        <input type="number" formControlName="cena" placeholder="Cena" />
+        <input type="number" formControlName="popust" placeholder="Popust" />
+
+        <div class="dugmici">
+          <button type="button" (click)="zatvoriFormu()">Otkaži</button>
+          <button type="submit">Dodaj</button>
+        </div>
+    </form>
+</div>
+</div>
+}
