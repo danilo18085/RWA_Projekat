@@ -1,8 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject, Service } from '@angular/core';
 import { IgricaModel } from '../Interfaces/IgricaModel';
-import { EMPTY, filter, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Filter } from '../Interfaces/Filter';
+import { TiketModel } from '../Interfaces/TiketModel';
 
 @Service()
 export class IgricaService {

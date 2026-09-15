@@ -12,5 +12,27 @@
         </div>
         <div class="divider_linija max_velicina"></div>
 
-        <button>Placanje</button>
+        <button (click)="otvoriFormu()">Plaćanje</button>
+
+        @if (prikaziFormu()) 
+        {
+        <div class="overlay">
+        <div class="modal">
+            <form [formGroup]="forma" (ngSubmit)="sacuvaj()">
+                <input type="text" formControlName="imeIprezime" placeholder="Ime i Prezime" />
+                <input type="text" formControlName="email" placeholder="Email adresa" />
+                <input type="text" formControlName="adresaIsporuke" placeholder="Adresa isporuke" />
+                <select formControlName="nacinPlacanja" class="select-element">
+                  <option value="" disabled selected>Način plaćanja</option>
+                  <option value="KARTICA">Kartica</option>
+                  <option value="KEŠ">Keš</option>
+                </select>
+                <div class="dugmici">
+                  <button type="button" (click)="zatvoriFormu()">Otkaži</button>
+                  <button type="submit">Poruči</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        }
     </div>

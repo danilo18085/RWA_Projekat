@@ -9,10 +9,10 @@ export const inicijalno_stanje_notifikacija = adapter_niz_notifikacija.getInitia
 
 export const notifikacijaReducer = createReducer(
     inicijalno_stanje_notifikacija,
-    on(NotifikacijaActions.prikazi, (state, {notifikacija}) => {
+    on(NotifikacijaActions.prikazi_notifikaciju, (state, {notifikacija}) => {
         return adapter_niz_notifikacija.addOne(notifikacija, state)
     }),
-    on(NotifikacijaActions.ukloni, (state, {id}) => {
+    on(NotifikacijaActions.ukloni_notifikaciju, (state, {id}) => {
         return adapter_niz_notifikacija.removeOne(id, state)
     })
 )

@@ -14,22 +14,22 @@ export class NotifikacijaEffects {
 
   prikaziRedom$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(NotifikacijaActions.posalji),
+      ofType(NotifikacijaActions.posalji_notifikaciju),
       concatMap(({ notifikacija }) =>
         of({ ...notifikacija, id: brojac++ }).pipe(delay(2000))
       ),
-      map(notifikacija => NotifikacijaActions.prikazi({ notifikacija }))
+      map(notifikacija => NotifikacijaActions.prikazi_notifikaciju({ notifikacija }))
     )
   )
 
 
   ukloniPoslePrikaza$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(NotifikacijaActions.prikazi),
+      ofType(NotifikacijaActions.prikazi_notifikaciju),
       mergeMap(({ notifikacija }) =>
         of(notifikacija.id).pipe(delay(notifikacija.trajanje))
       ),
-      map(id => NotifikacijaActions.ukloni({ id }))
+      map(id => NotifikacijaActions.ukloni_notifikaciju({ id }))
     )
   );
 }
