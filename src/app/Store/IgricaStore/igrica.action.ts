@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { IgricaModel } from "../Interfaces/IgricaModel";
+import { IgricaModel } from "../../Interfaces/IgricaModel";
 
 export const vrati_sve_igrice_akcija = createAction(
     "VratiSveIgrice"

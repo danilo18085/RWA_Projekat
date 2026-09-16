@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store"
 import { setuj_cenu, setuj_search, setuj_zanr } from "./filteri.actions"
-import { Filter } from "../Interfaces/Filter"
+import { Filter } from "../../Interfaces/Filter"
 
 export const filter_stanje : Filter = 
 {

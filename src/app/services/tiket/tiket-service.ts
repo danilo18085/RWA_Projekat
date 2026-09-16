@@ -22,4 +22,10 @@ export class TiketService
     {
         return this.http.get<Tiket[]>(this.url + "/vrati_tikete" + "/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token())
     }
+
+    izbrisi_tiket(id : string)
+    {
+        console.log(this.url + "/izbrisi_tiket" + "/" + id + "/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token())
+        return this.http.delete<Tiket>(this.url + "/izbrisi_tiket" + "/" + id + "/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token())
+    }
 }

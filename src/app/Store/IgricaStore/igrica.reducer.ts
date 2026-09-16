@@ -1,7 +1,7 @@
 import { createEntityAdapter } from "@ngrx/entity"
-import { IgricaModel } from "../Interfaces/IgricaModel"
+import { IgricaModel } from "../../Interfaces/IgricaModel"
 import { createReducer, on } from "@ngrx/store"
-import { vrati_sve_igrice_success } from "./igrica.action"
+import { vrati_sve_igrice_success } from "../IgricaStore/igrica.action"
 
 
 export const adapter_niz_igrica = createEntityAdapter<IgricaModel>()

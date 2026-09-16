@@ -2,11 +2,10 @@ import { inject, Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { combineLatest, debounceTime, distinctUntilChanged, filter, map, skip, startWith, switchMap, tap } from "rxjs";
 import { cena_selector, search_selector, zanr_selector } from "./filter.selector";
-import { Filter } from "../Interfaces/Filter";
+import { Filter } from "../../Interfaces/Filter";
 import { createEffect } from "@ngrx/effects";
-import { IgricaService } from "../Services/igrica-service";
-import * as FilteriAkcije from "./filteri.actions"
-import * as IgricaAkcija from "./igrica.action"
+import { IgricaService } from "../../Services/igrica/igrica-service";
+import * as IgricaAkcija from "../IgricaStore/igrica.action"
 
 @Injectable()
 export class FilteriEffects

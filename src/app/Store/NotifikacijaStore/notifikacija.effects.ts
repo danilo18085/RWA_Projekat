@@ -1,6 +1,6 @@
 import { inject, Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { concatMap, delay, map, mergeMap, Observable, of } from "rxjs";
+import { concatMap, delay, map, mergeMap, of } from "rxjs";
 import { NotifikacijaActions } from "./notifikacija.actions";
 
 let brojac : number = 0;

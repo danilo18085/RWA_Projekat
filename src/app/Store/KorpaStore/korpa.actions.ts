@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { ElementKorpaModel } from "../Interfaces/ElementKorpaModel";
+import { ElementKorpaModel } from "../../Interfaces/ElementKorpaModel";
 
 
 export const dodaj_u_korpu_akcija = createAction(

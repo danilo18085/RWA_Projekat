@@ -1,6 +1,6 @@
 import { inject, Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { IgricaService } from "../Services/igrica-service";
+import { IgricaService } from "../../Services/igrica/igrica-service";
 import * as IgriceActions from "./igrica.action"
 import { map, mergeMap } from "rxjs";
 

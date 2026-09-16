@@ -1,6 +1,6 @@
 import { EntityState } from "@ngrx/entity";
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { Notifikacija } from "../Interfaces/Notifikacija";
+import { Notifikacija } from "../../Interfaces/Notifikacija";
 
 export const notifikacija_feature = createFeatureSelector<EntityState<Notifikacija>>("notifikacija_red")
 

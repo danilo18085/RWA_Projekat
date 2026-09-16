@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store"
-import { Filter } from "../Interfaces/Filter"
+import { Filter } from "../../Interfaces/Filter"
 
 export const search_feature = createFeatureSelector<Filter>("filteri_red")
 

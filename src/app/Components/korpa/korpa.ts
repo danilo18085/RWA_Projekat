@@ -2,16 +2,14 @@ import { Component, inject, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ElementKorpaModel } from '../../Interfaces/ElementKorpaModel';
-import { selectSveElementeKorpe, selectUkupnaCena } from '../../Store/korpa.selector';
+import { selectSveElementeKorpe, selectUkupnaCena } from '../../Store/KorpaStore/korpa.selector';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { ElementUKorpi } from '../element-u-korpi/element-u-korpi';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { TiketModel } from '../../Interfaces/TiketModel';
-import { NotifikacijaDTO } from '../../Interfaces/Notifikacija';
-import { NotifikacijaActions } from '../../Store/notifikacija.actions';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { IgricaService } from '../../Services/igrica-service';
 import { TiketService } from '../../Services/tiket/tiket-service';
+import { NotifikacijaActions } from '../../Store/NotifikacijaStore/notifikacija.actions';
 
 @Component({
   selector: 'app-korpa',

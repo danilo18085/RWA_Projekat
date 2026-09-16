@@ -54,3 +54,9 @@
   justify-content: flex-end;
   gap: 8px;
 }
+
+.dugme_tiketi
+{
+  margin: 8px;
+  background-color: black;
+}

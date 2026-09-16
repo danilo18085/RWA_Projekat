@@ -1,6 +1,6 @@
 import { EntityState } from "@ngrx/entity"
 import { createFeatureSelector, createSelector } from "@ngrx/store"
-import { IgricaModel } from "../Interfaces/IgricaModel"
+import { IgricaModel } from "../../Interfaces/IgricaModel"
 
 
 export const igrica_feature = createFeatureSelector<EntityState<IgricaModel>>("igrica_red")

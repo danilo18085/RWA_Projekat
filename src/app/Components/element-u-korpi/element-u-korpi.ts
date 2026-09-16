@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { ElementKorpaModel } from '../../Interfaces/ElementKorpaModel';
 import { Store } from '@ngrx/store';
-import { izbaci_iz_korpe_akcija } from '../../Store/korpa.actions';
+import { izbaci_iz_korpe_akcija } from '../../Store/KorpaStore/korpa.actions';
 
 @Component({
   selector: 'app-element-u-korpi',

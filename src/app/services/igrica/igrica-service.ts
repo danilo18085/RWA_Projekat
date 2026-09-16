@@ -1,11 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject, Service } from '@angular/core';
-import { IgricaModel } from '../Interfaces/IgricaModel';
+import { IgricaModel } from '../../Interfaces/IgricaModel';
 import { Observable } from 'rxjs';
-import { Filter } from '../Interfaces/Filter';
-import { TiketModel } from '../Interfaces/TiketModel';
-import { IgricaModelDodavanje } from '../Interfaces/IgricaModelDodavanje';
-import { AdminService } from './admin/admin-service';
+import { Filter } from '../../Interfaces/Filter';
+import { IgricaModelDodavanje } from '../../Interfaces/IgricaModelDodavanje';
+import { AdminService } from '../admin/admin-service';
 
 @Service()
 export class IgricaService {

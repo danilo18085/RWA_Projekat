@@ -3,8 +3,9 @@ import { AdminService } from '../../../Services/admin/admin-service';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { AdminModel } from '../../../Interfaces/AdminModel';
 import { Store } from '@ngrx/store';
-import { NotifikacijaActions } from '../../../Store/notifikacija.actions';
 import { DodajButton } from '../../dodaj-button/dodaj-button';
+import { Router } from '@angular/router';
+import { NotifikacijaActions } from '../../../Store/NotifikacijaStore/notifikacija.actions';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,8 @@ export class Header
 
   private fb = inject(FormBuilder);
   protected prikaziFormu = signal(false);
+
+  private router : Router = inject(Router)
 
 
   logout()
@@ -78,5 +81,8 @@ export class Header
     
   }
 
-
+  dugme_tiketi()
+  {
+    this.router.navigate(['/tiketi'])
+  }
 }

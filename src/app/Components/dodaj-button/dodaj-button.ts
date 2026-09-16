@@ -1,10 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { IgricaModelDodavanje } from '../../Interfaces/IgricaModelDodavanje';
-import { IgricaService } from '../../Services/igrica-service';
+import { IgricaService } from '../../Services/igrica/igrica-service';
 import { Store } from '@ngrx/store';
-import { NotifikacijaActions } from '../../Store/notifikacija.actions';
-import { vrati_sve_igrice_akcija } from '../../Store/igrica.action';
+import { NotifikacijaActions } from '../../Store/NotifikacijaStore/notifikacija.actions';
+import { vrati_sve_igrice_akcija } from '../../Store/IgricaStore/igrica.action';
 
 @Component({
   selector: 'app-dodaj-button',

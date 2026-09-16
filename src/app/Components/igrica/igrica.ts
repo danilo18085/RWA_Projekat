@@ -1,14 +1,14 @@
 import { Component, inject, Input } from '@angular/core';
 import { IgricaModel } from '../../Interfaces/IgricaModel';
 import { Store } from '@ngrx/store';
-import { dodaj_u_korpu_akcija } from '../../Store/korpa.actions';
+import { dodaj_u_korpu_akcija } from '../../Store/KorpaStore/korpa.actions';
 import { ElementKorpaModel } from '../../Interfaces/ElementKorpaModel';
-import { GeneratorID } from '../../Services/generator-id';
+import { GeneratorID } from '../../Services/generator/generator-id';
 import { AdminService } from '../../Services/admin/admin-service';
-import { IgricaModelDodavanje } from '../../Interfaces/IgricaModelDodavanje';
-import { IgricaService } from '../../Services/igrica-service';
-import { NotifikacijaActions } from '../../Store/notifikacija.actions';
-import { vrati_sve_igrice_akcija } from '../../Store/igrica.action';
+import { IgricaService } from '../../Services/igrica/igrica-service';
+import { NotifikacijaActions } from '../../Store/NotifikacijaStore/notifikacija.actions';
+import { vrati_sve_igrice_akcija } from '../../Store/IgricaStore/igrica.action';
+
 
 @Component({
   selector: 'app-igrica',

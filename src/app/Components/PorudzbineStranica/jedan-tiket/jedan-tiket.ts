@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Tiket } from '../../../Interfaces/Tiket';
+import { TiketService } from '../../../Services/tiket/tiket-service';
+import { Store } from '@ngrx/store';
+import { vrati_sve_tikete } from '../../../Store/TiketStore/tiket.actions';
 
 @Component({
   selector: 'app-jedan-tiket',
@@ -10,10 +13,21 @@ import { Tiket } from '../../../Interfaces/Tiket';
 export class JedanTiket 
 {
   @Input() tiket : null | Tiket = null
+  private tiket_service : TiketService = inject(TiketService)
+  private store : Store = inject(Store)
 
   prihvati() 
   {
-    alert("PRIHVATIO SAMMM")
+    if(this.tiket)
+    {
+      this.tiket_service.izbrisi_tiket(this.tiket.id.toString()).subscribe(
+        (rez) =>{
+          console.log(rez)
+          this.store.dispatch(vrati_sve_tikete())
+        } 
+      )
+    }
+      
   }
 
 }

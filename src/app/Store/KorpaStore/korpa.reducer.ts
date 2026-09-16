@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityState } from "@ngrx/entity";
-import { ElementKorpaModel } from "../Interfaces/ElementKorpaModel";
+import { ElementKorpaModel } from "../../Interfaces/ElementKorpaModel";
 import { createReducer, on } from "@ngrx/store";
 import { dodaj_u_korpu_akcija, izbaci_iz_korpe_akcija } from "./korpa.actions";
 

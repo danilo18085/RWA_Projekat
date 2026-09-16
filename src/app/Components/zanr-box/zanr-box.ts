@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { setuj_zanr } from '../../Store/filteri.actions';
+import { setuj_zanr } from '../../Store/FilterStore/filteri.actions';
 
 @Component({
   selector: 'app-zanr-box',

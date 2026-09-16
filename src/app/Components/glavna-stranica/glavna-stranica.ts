@@ -8,5 +8,6 @@ import { Notification } from '../notification/notification';
   imports: [Header, MainContainer, Notification],
   templateUrl: './glavna-stranica.html',
   styleUrl: './glavna-stranica.css',
+  standalone: true
 })
 export class GlavnaStranica {}

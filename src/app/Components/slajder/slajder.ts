@@ -1,6 +1,6 @@
 import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { setuj_cenu } from '../../Store/filteri.actions';
+import { setuj_cenu } from '../../Store/FilterStore/filteri.actions';
 
 @Component({
   selector: 'app-slajder',

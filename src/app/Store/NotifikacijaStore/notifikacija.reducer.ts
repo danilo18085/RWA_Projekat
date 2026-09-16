@@ -1,5 +1,5 @@
 import { createEntityAdapter } from "@ngrx/entity";
-import { Notifikacija } from "../Interfaces/Notifikacija";
+import { Notifikacija } from "../../Interfaces/Notifikacija";
 import { createReducer, on } from "@ngrx/store";
 import { NotifikacijaActions } from "./notifikacija.actions";
 

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { setuj_search } from '../../Store/filteri.actions';
+import { setuj_search } from '../../Store/FilterStore/filteri.actions';
 
 @Component({
   selector: 'app-search-bar',
