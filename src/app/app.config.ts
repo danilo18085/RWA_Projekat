@@ -14,6 +14,8 @@ import { igricaReducer } from './Store/igrica.reducer';
 import { FilteriEffects } from './Store/filteri.effects';
 import { filter_reducer_funkcija } from './Store/filteri.reducer';
 import { korpa_reducer } from './Store/korpa.reducer';
+import { tiket_reducer } from './Store/TiketStore/tiket.reducer';
+import { TiketEffects } from './Store/TiketStore/tiket.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,10 +26,11 @@ export const appConfig: ApplicationConfig = {
                   notifikacija_red: notifikacijaReducer,
                   igrica_red: igricaReducer,
                   filteri_red: filter_reducer_funkcija,
-                  korpa_red: korpa_reducer
+                  korpa_red: korpa_reducer,
+                  tiket_red: tiket_reducer
                 }),
     provideHttpClient(),
-    provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects, FilteriEffects),
+    provideEffects(PesmeEffects, NotifikacijaEffects, IgricaEffects, FilteriEffects, TiketEffects),
     provideStoreDevtools({
       maxAge: 25,
       logOnly: !isDevMode(),

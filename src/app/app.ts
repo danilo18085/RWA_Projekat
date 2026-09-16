@@ -3,11 +3,12 @@ import { GlavnaStranica } from './Components/glavna-stranica/glavna-stranica';
 import { JedanTiket } from './Components/PorudzbineStranica/jedan-tiket/jedan-tiket';
 import { TiketModel } from './Interfaces/TiketModel';
 import { Tiket } from './Interfaces/Tiket';
+import { SkupTiketa } from './Components/PorudzbineStranica/skup-tiketa/skup-tiketa';
 
 
 @Component({
   selector: 'app-root',
-  imports: [GlavnaStranica, JedanTiket],
+  imports: [GlavnaStranica, JedanTiket, SkupTiketa],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

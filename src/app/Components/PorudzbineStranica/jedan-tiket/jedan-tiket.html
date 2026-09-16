@@ -7,11 +7,11 @@
         <h3>Kupac: {{tiket.kupac}}</h3>
         <h3>Broj igrica: {{tiket.broj_igrica}}</h3>
         <h3>Email: {{tiket.email_adresa}}</h3>
-        <h3>Način plaćanja: {{tiket.nacin_placanja}}</h3>
-        <h3>Adresa isporuke: {{tiket.adresa_isporuke}}</h3>
+        <h3>Plaćanje: {{tiket.nacin_placanja}}</h3>
+        <h3>Adresa: {{tiket.adresa_isporuke}}</h3>
         <div class="divider_linija"></div>
 
-        <h3>Ukupna cena: {{tiket.ukupna_cena}}$</h3>
+        <h3>Ukupna cena: {{tiket.ukupna_cena.toFixed(2)}}$</h3>
 
         <button (click)="prihvati()" class="prihvati">Prihvati</button>
     </div>

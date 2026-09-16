@@ -1,1 +1,10 @@
-<p>skup-tiketa works!</p>
+<div class="header">
+    <button class="dugme_vrati" (click)="vrati_nazad()">Vrati nazad</button>
+</div>
+
+<div class="skup_tiketa_kontejner">
+    @for (jedan_tiket of (niz_tiketa$ | async); track jedan_tiket.id)
+    {
+        <app-jedan-tiket [tiket]="jedan_tiket"></app-jedan-tiket>
+    }
+</div>
