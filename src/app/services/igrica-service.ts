@@ -37,4 +37,9 @@ export class IgricaService {
       return this.http.post<IgricaModel>(this.url + "/dodaj_igricu/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token(), igra)
     }
 
+    izbrisi_igricu(id : string)
+    {
+      return this.http.delete<IgricaModel>(this.url + "/izbrisi_igricu/" + id.toString() + "/" + this.admin_service.vrati_username() + "/" + this.admin_service.vrati_token())
+    }
+
 }

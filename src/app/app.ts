@@ -1,12 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Header } from './Components/Kontejneri/header/header';
-import { MainContainer } from './Components/Kontejneri/main-container/main-container';
-import { Notification } from "./Components/notification/notification";
+import { GlavnaStranica } from './Components/glavna-stranica/glavna-stranica';
 
 
 @Component({
   selector: 'app-root',
-  imports: [Header, MainContainer, Notification],
+  imports: [GlavnaStranica],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

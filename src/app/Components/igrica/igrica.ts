@@ -4,6 +4,11 @@ import { Store } from '@ngrx/store';
 import { dodaj_u_korpu_akcija } from '../../Store/korpa.actions';
 import { ElementKorpaModel } from '../../Interfaces/ElementKorpaModel';
 import { GeneratorID } from '../../Services/generator-id';
+import { AdminService } from '../../Services/admin/admin-service';
+import { IgricaModelDodavanje } from '../../Interfaces/IgricaModelDodavanje';
+import { IgricaService } from '../../Services/igrica-service';
+import { NotifikacijaActions } from '../../Store/notifikacija.actions';
+import { vrati_sve_igrice_akcija } from '../../Store/igrica.action';
 
 @Component({
   selector: 'app-igrica',
@@ -17,6 +22,8 @@ export class Igrica {
 
   private store : Store = inject(Store)
   private generatorService : GeneratorID = inject(GeneratorID)
+  protected admin_service : AdminService = inject(AdminService)
+  private igrica_service : IgricaService = inject(IgricaService)
 
   @Input() igrica : IgricaModel | null = null;
 
@@ -37,4 +44,18 @@ export class Igrica {
     this.store.dispatch(dodaj_u_korpu_akcija({element: el}))
     }
   }
+
+  izbrisi_igru()
+  {
+    if(this.igrica !== null)
+      this.igrica_service.izbrisi_igricu(this.igrica.id.toString()).subscribe(
+        res => {
+          console.log(res)
+          this.store.dispatch(NotifikacijaActions.posalji_notifikaciju({notifikacija: {trajanje: 5500, poruka: "Uspesno ste obrisali igru"}}))
+          this.store.dispatch(vrati_sve_igrice_akcija())
+        }
+    )
+  }
+
+
 }

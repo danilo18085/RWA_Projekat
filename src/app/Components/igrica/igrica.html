@@ -10,7 +10,7 @@
             <img src="./Slike/{{igrica.id}}.jpg" class="image_wrapper">
         }
         <h3>{{igrica.ime}}</h3>
-        <p>Zanr: {{igrica.zanr}}</p>
+        <p>Žanr: {{igrica.zanr}}</p>
         <p>Godina: {{igrica.godina}}</p>
         <p>Rating: {{igrica.rating.toFixed(1)}}</p>
         <div class="divider_linija">
@@ -20,5 +20,9 @@
            <h3>-{{igrica.popust}}%</h3>
         </div>
         <button (click)="dodaj_u_korpu()">Dodaj u korpu</button>
+        @if (this.admin_service.isAdmin())
+        {
+            <button class="izbrisi_dugme" (click)="izbrisi_igru()">Izbriši igru</button>
+        }
     </div>
 }
