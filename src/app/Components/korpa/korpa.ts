@@ -10,6 +10,7 @@ import { TiketModel } from '../../Interfaces/TiketModel';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TiketService } from '../../Services/tiket/tiket-service';
 import { NotifikacijaActions } from '../../Store/NotifikacijaStore/notifikacija.actions';
+import { ocisti_korpu } from '../../Store/KorpaStore/korpa.actions';
 
 @Component({
   selector: 'app-korpa',
@@ -78,5 +79,11 @@ export class Korpa {
     this.store.dispatch(NotifikacijaActions.posalji_notifikaciju({notifikacija: {trajanje: 5500, poruka: "Admin ce pregledati vasu posiljku"}}))
 
     this.zatvoriFormu()
+    this.isprazni_korpu()
+  }
+
+  isprazni_korpu()
+  {
+    this.store.dispatch(ocisti_korpu())
   }
 }

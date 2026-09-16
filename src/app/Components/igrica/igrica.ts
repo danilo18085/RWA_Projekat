@@ -7,7 +7,7 @@ import { GeneratorID } from '../../Services/generator/generator-id';
 import { AdminService } from '../../Services/admin/admin-service';
 import { IgricaService } from '../../Services/igrica/igrica-service';
 import { NotifikacijaActions } from '../../Store/NotifikacijaStore/notifikacija.actions';
-import { vrati_sve_igrice_akcija } from '../../Store/IgricaStore/igrica.action';
+import { izbrisi_igru_akcija, vrati_sve_igrice_akcija } from '../../Store/IgricaStore/igrica.action';
 
 
 @Component({
@@ -50,9 +50,9 @@ export class Igrica {
     if(this.igrica !== null)
       this.igrica_service.izbrisi_igricu(this.igrica.id.toString()).subscribe(
         res => {
-          console.log(res)
+          if(this.igrica !== null)
+            this.store.dispatch(izbrisi_igru_akcija({id : this.igrica.id}))
           this.store.dispatch(NotifikacijaActions.posalji_notifikaciju({notifikacija: {trajanje: 5500, poruka: "Uspesno ste obrisali igru"}}))
-          this.store.dispatch(vrati_sve_igrice_akcija())
         }
     )
   }

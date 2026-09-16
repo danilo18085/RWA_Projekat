@@ -1,7 +1,7 @@
 import { createEntityAdapter, EntityState } from "@ngrx/entity";
 import { ElementKorpaModel } from "../../Interfaces/ElementKorpaModel";
 import { createReducer, on } from "@ngrx/store";
-import { dodaj_u_korpu_akcija, izbaci_iz_korpe_akcija } from "./korpa.actions";
+import { dodaj_u_korpu_akcija, izbaci_iz_korpe_akcija, ocisti_korpu } from "./korpa.actions";
 
 export interface KorpaState extends EntityState<ElementKorpaModel> {
     ukupnaCena : number
@@ -27,6 +27,13 @@ export const korpa_reducer = createReducer(
         return {
             ...novi_niz,
             ukupnaCena : state.ukupnaCena - element.cena
+        }
+    }),
+    on(ocisti_korpu, (state, {}) => {
+        const novi_niz = adapter_niz_elemenata.removeAll(state)
+        return {
+            ...novi_niz,
+            ukupnaCena: 0.00
         }
     })
 )

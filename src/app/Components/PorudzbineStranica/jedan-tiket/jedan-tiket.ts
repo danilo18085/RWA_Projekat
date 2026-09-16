@@ -2,7 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { Tiket } from '../../../Interfaces/Tiket';
 import { TiketService } from '../../../Services/tiket/tiket-service';
 import { Store } from '@ngrx/store';
-import { vrati_sve_tikete } from '../../../Store/TiketStore/tiket.actions';
+import { izbrisi_tiket_akcija, vrati_sve_tikete } from '../../../Store/TiketStore/tiket.actions';
 
 @Component({
   selector: 'app-jedan-tiket',
@@ -22,8 +22,9 @@ export class JedanTiket
     {
       this.tiket_service.izbrisi_tiket(this.tiket.id.toString()).subscribe(
         (rez) =>{
-          console.log(rez)
-          this.store.dispatch(vrati_sve_tikete())
+          if (this.tiket !== null)
+            this.store.dispatch(izbrisi_tiket_akcija({id: this.tiket.id}))
+          
         } 
       )
     }

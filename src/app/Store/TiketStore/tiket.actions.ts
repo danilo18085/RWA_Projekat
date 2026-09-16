@@ -10,3 +10,9 @@ export const vrati_sve_tikete_success = createAction(
     "TiketiVraceniSuccess",
     props<{niz_tiketa : Tiket[]}>()
 )
+
+
+export const izbrisi_tiket_akcija = createAction(
+    "IzbrisiTiketAkcija",
+    props<{id : number}>()
+)

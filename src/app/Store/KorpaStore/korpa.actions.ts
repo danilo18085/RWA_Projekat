@@ -11,3 +11,7 @@ export const izbaci_iz_korpe_akcija = createAction(
     "izbaci iz korpe",
     props<{element : ElementKorpaModel}>()
 )
+
+export const ocisti_korpu = createAction(
+    "ocisti_korpu"
+)

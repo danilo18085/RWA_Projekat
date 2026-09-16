@@ -9,3 +9,8 @@ export const vrati_sve_igrice_success = createAction(
     "IgriceVraceneSuccess",
     props<{niz_igrica : IgricaModel[]}>()
 )
+
+export const izbrisi_igru_akcija = createAction(
+    "IzbrisiIgruAkcija",
+    props<{id : number}>()
+)
