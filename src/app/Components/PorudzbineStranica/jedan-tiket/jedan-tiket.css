@@ -1,0 +1,39 @@
+
+.kontejner_igrica
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 20px;
+
+    max-width: 300px;
+    height: auto;
+
+    color: #ffffff;          
+    background-color: #3f3e3d;
+
+    border-radius: 14px;
+    box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 10px 30px rgba(0, 0, 0, 0.8);
+    padding: 12px;
+
+}
+
+.divider_linija
+{
+  height: 2px;
+  background-color: #328ba8;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.prihvati
+{
+    background-color: #328ba8;
+}
+
+.plava_slova 
+{
+    color: #328ba8;
+}

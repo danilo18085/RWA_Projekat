@@ -1,0 +1,18 @@
+@if (tiket)
+{
+    <div class="kontejner_igrica">
+        <h3 class="plava_slova">Tiket broj: {{tiket.id}}</h3>
+        <div class="divider_linija"></div>
+
+        <h3>Kupac: {{tiket.kupac}}</h3>
+        <h3>Broj igrica: {{tiket.broj_igrica}}</h3>
+        <h3>Email: {{tiket.email_adresa}}</h3>
+        <h3>Način plaćanja: {{tiket.nacin_placanja}}</h3>
+        <h3>Adresa isporuke: {{tiket.adresa_isporuke}}</h3>
+        <div class="divider_linija"></div>
+
+        <h3>Ukupna cena: {{tiket.ukupna_cena}}$</h3>
+
+        <button (click)="prihvati()" class="prihvati">Prihvati</button>
+    </div>
+}
